@@ -65,6 +65,5 @@ supabase/migrations/
 *.temp
 .cach
 /app
-components/dashboard/ReportCard.tsx
 /components
 /contexts
