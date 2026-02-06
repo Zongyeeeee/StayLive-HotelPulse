@@ -10,9 +10,35 @@
 
 ---
 
-## What's New in v3.5.0
+## What's New in v3.6.0
 
-### Flexible Membership Billing
+### SEO Optimization
+Full search engine optimization for better discoverability:
+
+- **Rich Metadata** — Open Graph, Twitter Cards, and keywords for social sharing and search results
+- **Structured Data** — JSON-LD schema (WebApplication + TravelApplication) for Google rich results
+- **Sitemap & Robots** — Auto-generated `sitemap.xml` and `robots.txt` for crawler guidance
+- **Google Search Console** — Site verified and sitemap submitted for indexing
+
+### Server-Side Data Loading
+Dashboard and visitor pages refactored from client-side to server-side data processing:
+
+- **Server-Side Stats** — Aggregated stats via Postgres RPC function (`get_report_stats`) instead of loading all reports into browser memory
+- **Server-Side Search** — Database `ILIKE` queries with debounced input (300ms) replace client-side filtering
+- **True Pagination** — Offset-based `.range()` queries for Load More, no full dataset preload
+- **Reduced Memory** — Only displayed reports kept in state, not the entire dataset
+
+### Report Rate Limiting & Moderation
+Multi-layer submission protection to prevent abuse:
+
+- **Daily Limit** — Max 10 reports per user per day
+- **Cooldown System** — 5 attempts per 20-minute window, then cooldown
+- **Failed Attempts Count** — All submission attempts (including rejected ones) count toward limits
+- **Hybrid Tracking** — In-memory tracking for failed attempts + DB fallback for server restarts
+- **Specific Error Messages** — Each moderation layer now shows its own error message to users
+
+### Previous: v3.5.0 — Flexible Membership Billing
+
 Choose your preferred billing cycle for Pro and Ultra memberships:
 
 | Period | Duration | Best For |
