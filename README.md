@@ -1,6 +1,6 @@
 # StayLive
 
-**v3.6.0** | Real-time Hotel Pulse
+**v3.7.0** | Real-time Hotel Pulse
 
 [![Stars](https://img.shields.io/github/stars/Zongyeeeee/StayLive-HotelPulse?style=flat)](https://github.com/Zongyeeeee/StayLive-HotelPulse/stargazers)
 [![Live](https://img.shields.io/badge/Live-stay--live.com-00D4FF?style=flat)](https://stay-live.com)
@@ -10,9 +10,30 @@
 
 ---
 
-## What's New in v3.6.0
+## What's New in v3.7.0
 
-### SEO Optimization
+### Mobile Responsive Optimization
+Full mobile-first responsive redesign for seamless experience across all devices:
+
+- **Adaptive Navigation** — Collapsible nav bar with mobile-friendly controls
+- **Responsive Dashboard** — Stats grid, live feed, and report cards adapt to screen size
+- **Touch-Optimized Forms** — Larger tap targets, proper input sizing, and mobile keyboard support
+- **Flexible Layouts** — CSS grid and flexbox adjustments for small screens
+
+### Multi-Channel Authentication
+Expanded login options beyond Google OAuth:
+
+- **Email/Password Sign Up** — Register with any email, verified via 6-digit OTP code
+- **Email/Password Sign In** — Direct login with email and password
+- **OTP Email Verification** — Secure email confirmation during registration
+- **Password Visibility Toggle** — Eye icon to show/hide password on sign-in page
+- **Rate Limiting** — Max 3 OTP requests per email per 24 hours
+- **Gmail Guard** — Gmail users redirected to Google OAuth for streamlined login
+- **Duplicate Detection** — Prevents re-registration of already-registered emails
+
+### Previous: v3.6.0 — SEO & Server-Side Optimization
+
+#### SEO Optimization
 Full search engine optimization for better discoverability:
 
 - **Rich Metadata** — Open Graph, Twitter Cards, and keywords for social sharing and search results
@@ -37,26 +58,16 @@ Multi-layer submission protection to prevent abuse:
 - **Hybrid Tracking** — In-memory tracking for failed attempts + DB fallback for server restarts
 - **Specific Error Messages** — Each moderation layer now shows its own error message to users
 
-### Previous: v3.5.0 — Flexible Membership Billing
-
-Choose your preferred billing cycle for Pro and Ultra memberships:
-
-| Period | Duration | Best For |
-|--------|----------|----------|
-| **Weekly** | 7 days | Essential for a single trip |
-| **Monthly** | 30 days | Regular travelers |
-| **Annually** | 365 days | Power users (best value) |
-
+#### Previous: v3.5.0 — Flexible Membership Billing
 - **Flexible Subscriptions** — Switch between weekly, monthly, and annual plans
-- **Proportional usage Allocation** — Usages scale with billing period (weekly = 1/4, annually = 12x monthly)
+- **Proportional usage Allocation** — Usages scale with billing period
 - **Seamless Stripe Integration** — All billing periods use Stripe's recurring subscription system
-- **Authentic Data** — Reviews sourced from verified TripAdvisor listings
 
-### Previous: v3.4.0 — Real Hotel Data & AI Styles
+#### Previous: v3.4.0 — Real Hotel Data & AI Styles
 - **Realistic Issue Reports** — Power outages, WiFi problems, elevator maintenance, construction noise
 - **AI Response Styles** — Concise, Balanced, and Creative modes for Jin AI
 
-### Previous: v3.3.0 — Stripe Payment Integration
+#### Previous: v3.3.0 — Stripe Payment Integration
 Seamless subscription management with **Stripe Checkout** — upgrade your membership with secure, one-click payments.
 
 - **Stripe Checkout Sessions** — Secure payment flow for Pro & Ultra plans
@@ -64,7 +75,7 @@ Seamless subscription management with **Stripe Checkout** — upgrade your membe
 - **Automatic Token Reset** — Tokens reset to 0 when upgrading tiers
 - **Smart Redirect Flow** — Pre-auth upgrade flow saves plan selection through OAuth
 
-### Previous: v3.2.0 — Jin AI Assistant
+#### Previous: v3.2.0 — Jin AI Assistant
 Meet **Jin** — your personal AI consultant for hotel insights, travel tips, and smart booking decisions. Powered by DeepSeek, Jin provides intelligent answers about hotels, travel planning, and helps you make informed choices.
 
 - Conversational AI chat interface
@@ -72,6 +83,7 @@ Meet **Jin** — your personal AI consultant for hotel insights, travel tips, an
 - Editable chat titles (right-click to rename)
 - Token quota system for fair usage
 - Pro/Ultra membership tiers for unlimited access
+
 
 ---
 
