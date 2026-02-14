@@ -1,6 +1,6 @@
 # StayLive
 
-**v3.8.0** | Real-time Hotel Pulse
+**v3.9.0** | Stay Smart. Stay Informed.
 
 [![Stars](https://img.shields.io/github/stars/Zongyeeeee/StayLive-HotelPulse?style=flat)](https://github.com/Zongyeeeee/StayLive-HotelPulse/stargazers)
 [![Live](https://img.shields.io/badge/Live-stay--live.com-00D4FF?style=flat)](https://stay-live.com)
@@ -10,9 +10,18 @@
 
 ---
 
-## What's New in v3.8.0
+## What's New in v3.9.0
 
-### Cancel Subscription
+### AI Web Search
+Jin AI now searches the web in real time to answer your travel questions with up-to-date information:
+
+- **Live Web Search** — Jin can fetch real-time results from the web to answer questions about destinations, hotels, flights, and travel advisories
+- **Source Citations** — Responses include source links so you can verify information
+- **Seamless Integration** — Web search activates automatically when Jin detects your question needs current data
+
+### Previous: v3.8.0 — Subscription Management & Legal
+
+#### Cancel Subscription
 Subscription management for Pro and Ultra members:
 
 - **Cancel Auto-Renewal** — Cancel subscription while keeping access until period end
@@ -21,7 +30,7 @@ Subscription management for Pro and Ultra members:
 - **Webhook Sync** — `customer.subscription.updated` event keeps database in sync
 - **Re-subscribe Ready** — Cancellation state resets automatically on new subscription
 
-### Password Reset with Rate Limiting
+#### Password Reset with Rate Limiting
 Secure password recovery flow with abuse prevention:
 
 - **Forgot Password** — Send reset link via email from the sign-in page
@@ -29,7 +38,7 @@ Secure password recovery flow with abuse prevention:
 - **Rate Limited** — One reset email per user per 24 hours to prevent abuse
 - **Expired Link Handling** — Clear error messages for expired or invalid reset links
 
-### Terms of Service & Privacy Policy
+#### Terms of Service & Privacy Policy
 Legal compliance pages with full bilingual support:
 
 - **Terms of Service** — 15 sections covering service description, subscriptions, AI disclaimers, indemnification, force majeure, and governing law (Victoria, Australia)
@@ -42,16 +51,12 @@ Legal compliance pages with full bilingual support:
 ### Previous: v3.7.0 — Mobile & Multi-Channel Auth
 
 #### Mobile Responsive Optimization
-Full mobile-first responsive redesign for seamless experience across all devices:
-
 - **Adaptive Navigation** — Collapsible nav bar with mobile-friendly controls
 - **Responsive Dashboard** — Stats grid, live feed, and report cards adapt to screen size
 - **Touch-Optimized Forms** — Larger tap targets, proper input sizing, and mobile keyboard support
 - **Flexible Layouts** — CSS grid and flexbox adjustments for small screens
 
 #### Multi-Channel Authentication
-Expanded login options beyond Google OAuth:
-
 - **Email/Password Sign Up** — Register with any email, verified via 6-digit OTP code
 - **Email/Password Sign In** — Direct login with email and password
 - **OTP Email Verification** — Secure email confirmation during registration
@@ -113,7 +118,6 @@ Meet **Jin** — your personal AI consultant for hotel insights, travel tips, an
 - Token quota system for fair usage
 - Pro/Ultra membership tiers for unlimited access
 
-
 ---
 
 ## What is StayLive?
@@ -151,6 +155,7 @@ StayLive creates a transparent feedback loop where guests warn each other before
 
 ### Authentication
 - **Google OAuth** — One-click sign in via Supabase
+- **Email/Password** — Sign up with OTP verification, sign in with password
 - **Guest Mode** — Browse reports without login
 - **Profile Management** — Customizable display names (max 15 characters, no spaces)
 
@@ -184,7 +189,7 @@ Preference auto-saved to localStorage.
 | **Language** | TypeScript 5.5 |
 | **UI** | React 18, Framer Motion |
 | **Database** | Supabase PostgreSQL |
-| **Auth** | Supabase Auth (Google OAuth + PKCE) |
+| **Auth** | Supabase Auth (Google OAuth + Email/Password + OTP) |
 | **Payments** | Stripe (Weekly/Monthly/Annual Subscriptions) |
 | **Reviews API** | TripAdvisor Content API + Google Places |
 | **Security** | Row Level Security (RLS) |
